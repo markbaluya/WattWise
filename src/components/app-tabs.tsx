@@ -1,32 +1,47 @@
-import { NativeTabs } from 'expo-router/native-tabs';
-import { useColorScheme } from 'react-native';
-
-import { Colors } from '@/constants/theme';
+import { Tabs } from 'expo-router';
+import { Ionicons } from '@expo/vector-icons';
+import { useThemeContext } from '@/contexts/ThemeContext';
 
 export default function AppTabs() {
-  const scheme = useColorScheme();
-  const colors = Colors[scheme === 'dark' ? 'dark' : 'light'];
+  const { colors } = useThemeContext();
 
   return (
-    <NativeTabs
-      backgroundColor={colors.background}
-      indicatorColor={colors.backgroundElement}
-      labelStyle={{ selected: { color: colors.text } }}>
-      <NativeTabs.Trigger name="index">
-        <NativeTabs.Trigger.Label>Home</NativeTabs.Trigger.Label>
-        <NativeTabs.Trigger.Icon
-          src={require('@/assets/images/tabIcons/home.png')}
-          renderingMode="template"
-        />
-      </NativeTabs.Trigger>
-
-      <NativeTabs.Trigger name="explore">
-        <NativeTabs.Trigger.Label>Explore</NativeTabs.Trigger.Label>
-        <NativeTabs.Trigger.Icon
-          src={require('@/assets/images/tabIcons/explore.png')}
-          renderingMode="template"
-        />
-      </NativeTabs.Trigger>
-    </NativeTabs>
+    <Tabs
+      screenOptions={{
+        headerShown: false,
+        tabBarStyle: {
+          backgroundColor: colors.background,
+          borderTopColor: colors.border,
+          borderTopWidth: 1,
+          height: 80,
+          paddingBottom: 24,
+          paddingTop: 12,
+        },
+        tabBarActiveTintColor: colors.cyan,
+        tabBarInactiveTintColor: colors.textSecondary,
+        tabBarLabelStyle: { fontSize: 11, fontWeight: '600' as const },
+      }}>
+      <Tabs.Screen
+        name="dashboard"
+        options={{
+          title: 'Home',
+          tabBarIcon: ({ color }) => <Ionicons name="home-outline" size={24} color={color as string} />,
+        }}
+      />
+      <Tabs.Screen
+        name="history"
+        options={{
+          title: 'History',
+          tabBarIcon: ({ color }) => <Ionicons name="time-outline" size={24} color={color as string} />,
+        }}
+      />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: 'Profile',
+          tabBarIcon: ({ color }) => <Ionicons name="person-circle-outline" size={24} color={color as string} />,
+        }}
+      />
+    </Tabs>
   );
 }

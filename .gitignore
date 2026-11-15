@@ -21,23 +21,44 @@ expo-env.d.ts
 # Metro
 .metro-health-check*
 
-# debug
+# debug / logs
 npm-debug.*
 yarn-debug.*
 yarn-error.*
+*.log
+backend/err.txt
+backend/out.txt
 
 # macOS
 .DS_Store
 *.pem
 
-# local env files
-.env*.local
+# local env files (never commit secrets)
+.env
+.env.*
+!.env.example
+backend/.env
+backend/.env.*
+!backend/.env.example
+backend/.data/
 
 # typescript
 *.tsbuildinfo
 
-example
+# local backups / scratch
+backups/
+backups2/
+backups3/
+backups4/
+backups5/
+backups6/
+backups_feature_impl/
+backups_security/
+example/
 
 # generated native folders
 /ios
 /android
+
+# local agent config
+.claude/

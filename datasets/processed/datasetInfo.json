@@ -1,0 +1,56 @@
+{
+  "name": "REFIT Electrical Load Measurements (Cleaned)",
+  "creators": [
+    "David Murray",
+    "Lina Stankovic"
+  ],
+  "institution": "University of Strathclyde",
+  "source": "Zenodo",
+  "doi": "10.5281/zenodo.5063428",
+  "license": "CC BY 4.0",
+  "description": "Cleaned electrical consumption data in Watts for 20 households at aggregate and appliance level, timestamped and sampled at 8 second intervals.",
+  "household": 11,
+  "appliances": [
+    {
+      "id": 1,
+      "name": "Fridge"
+    },
+    {
+      "id": 2,
+      "name": "Fridge-Freezer"
+    },
+    {
+      "id": 3,
+      "name": "Washing Machine"
+    },
+    {
+      "id": 4,
+      "name": "Dishwasher"
+    },
+    {
+      "id": 5,
+      "name": "Computer Site"
+    },
+    {
+      "id": 6,
+      "name": "Microwave"
+    },
+    {
+      "id": 7,
+      "name": "Kettle"
+    },
+    {
+      "id": 8,
+      "name": "Router"
+    },
+    {
+      "id": 9,
+      "name": "Hi-Fi"
+    }
+  ],
+  "samplePeriod": "2014-06-03 to 2014-06-09",
+  "totalReadings": 89415,
+  "samplingInterval": "~8 seconds",
+  "unit": "Watts",
+  "note": "Historical reference data. These are real measurements from a UK household (House 11), not from the user's home. Use as benchmarks for comparison and energy-saving insights."
+}

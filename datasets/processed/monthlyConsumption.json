@@ -1,0 +1,53 @@
+[
+  {
+    "month": "2014-06",
+    "aggregateKwh": 119.08,
+    "appliances": [
+      {
+        "id": 1,
+        "name": "Fridge",
+        "kwh": 0
+      },
+      {
+        "id": 2,
+        "name": "Fridge-Freezer",
+        "kwh": 5.32
+      },
+      {
+        "id": 3,
+        "name": "Washing Machine",
+        "kwh": 0.8
+      },
+      {
+        "id": 4,
+        "name": "Dishwasher",
+        "kwh": 0.13
+      },
+      {
+        "id": 5,
+        "name": "Computer Site",
+        "kwh": 0.05
+      },
+      {
+        "id": 6,
+        "name": "Microwave",
+        "kwh": 0.5
+      },
+      {
+        "id": 7,
+        "name": "Kettle",
+        "kwh": 1.71
+      },
+      {
+        "id": 8,
+        "name": "Router",
+        "kwh": 2.03
+      },
+      {
+        "id": 9,
+        "name": "Hi-Fi",
+        "kwh": 0.87
+      }
+    ]
+  }
+]
