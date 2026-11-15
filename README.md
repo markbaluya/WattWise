@@ -1,56 +1,187 @@
-# Welcome to your Expo app 👋
+# ⚡ WattWise — Electricity Consumption and Bill Estimation App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+WattWise is a mobile application designed to help users monitor their electricity consumption and estimate their monthly electricity bills. It allows users to manage their appliances, calculate estimated electricity costs, view bill history, and get assistance through an AI-powered chatbot.
 
-## Get started
+## 📱 Project Overview
 
-1. Install dependencies
+WattWise helps users understand how much electricity their appliances consume and how much they may need to pay for their electricity bills.
 
-   ```bash
-   npm install
-   ```
+The application provides a simple interface for managing electricity usage and monitoring estimated expenses.
 
-2. Start the app
+## ✨ Features
 
-   ```bash
-   npx expo start
-   ```
+- **Admin Authentication** — Secure administrator login using backend authentication.
+- **Dashboard** — View estimated electricity bills and consumption summaries.
+- **Appliance Management** — Select and manage household appliances.
+- **Bill Calculation** — Calculate estimated electricity consumption and monthly costs.
+- **Bill History** — View previously calculated electricity bills.
+- **AI Chatbot** — Get assistance through an AI-powered chatbot using Gemini.
+- **Conversation History** — Save and revisit previous chatbot conversations.
+- **Profile Management** — Update administrator profile information.
+- **Dark and Light Mode** — Switch between different application themes.
 
-In the output, you'll find options to open the app in a
+## 🛠️ Technologies Used
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+**Frontend**
+- React Native
+- Expo
+- TypeScript
+- Expo Router
+- Expo SecureStore
+- AsyncStorage
 
-You can start developing by editing the files inside the **src/app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+**Backend**
+- Node.js
+- Express.js
+- bcryptjs
+- Gemini API
 
-## Get a fresh project
+**Development Tools**
+- Visual Studio Code
+- Git
+- GitHub
+- Expo Go
 
-When you're ready, run:
+## 📂 Project Structure
 
-```bash
-npm run reset-project
+```text
+WattWise/
+├── backend/
+│   ├── server.js
+│   ├── package.json
+│   ├── .env.example
+│   └── .gitignore
+│
+├── src/
+│   ├── app/
+│   ├── components/
+│   ├── contexts/
+│   └── config/
+│
+├── assets/
+├── app.json
+├── package.json
+├── package-lock.json
+├── .env.example
+└── README.md
 ```
 
-This command will move the starter code to the **example** directory and create a blank **src/app** directory where you can start developing.
+*Note: The structure above is a simplified overview. Your actual project may contain additional files and folders.*
 
-### Other setup steps
+## ⚙️ Installation and Setup
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+### Prerequisites
 
-## Learn more
+Install the following before running the application:
 
-To learn more about developing your project with Expo, look at the following resources:
+- Node.js
+- npm
+- Visual Studio Code
+- Expo Go on your mobile device
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### 1. Clone the Repository
 
-## Join the community
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+```
 
-Join our community of developers creating universal apps.
+Navigate to the project folder:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```bash
+cd WattWise
+```
+
+### 2. Install Frontend Dependencies
+
+```bash
+npm install
+```
+
+### 3. Configure the Backend
+
+Navigate to the backend folder:
+
+```bash
+cd backend
+```
+
+Install backend dependencies:
+
+```bash
+npm install
+```
+
+Create your local `.env` file using `.env.example` as a guide.
+
+Add your Gemini API key to the backend environment configuration:
+
+```env
+GEMINI_API_KEY=YOUR_GEMINI_API_KEY
+```
+
+Do not upload your actual `.env` file to GitHub.
+
+### 4. Start the Backend
+
+Inside the backend folder, run:
+
+```bash
+npm start
+```
+
+Keep the backend running while using the mobile application.
+
+### 5. Configure the API Connection
+
+Make sure the frontend API configuration in `src/config/api.ts` points to the correct backend address.
+
+For local development, use the computer's reachable LAN IP address when connecting from a physical mobile device.
+
+For production, use a properly secured HTTPS backend URL.
+
+### 6. Start the Mobile Application
+
+Open another terminal in the main WattWise project folder:
+
+```bash
+npx expo start
+```
+
+Scan the QR code using Expo Go to open the application.
+
+## 🔐 Administrator Setup
+
+WattWise uses backend-based administrator authentication.
+
+On the first launch, when no administrator account exists:
+
+1. Start the backend server.
+2. Open the WattWise mobile application.
+3. Select **Set Up Administrator**.
+4. Create a secure administrator password.
+5. Sign in using the administrator account.
+
+Passwords are hashed using bcrypt on the backend. Session tokens are stored using Expo SecureStore.
+
+**Important:** Never share your administrator password or upload your backend environment files or private account data to GitHub.
+
+## 🔒 Security Notes
+
+- Administrator authentication is handled by the backend.
+- Passwords are stored as bcrypt hashes.
+- Protected API endpoints require authentication.
+- Gemini API credentials are kept on the backend.
+- Local environment files and administrator data are excluded from Git.
+- HTTPS should be used when deploying the backend publicly.
+
+## 🚀 Future Improvements
+
+- Deploy the backend to a secure hosting service.
+- Improve session management and persistence.
+- Add more electricity monitoring features.
+- Improve appliance consumption analytics.
+- Conduct additional security and usability testing.
+
+---
+
+*WattWise — Making Electricity Consumption Easier to Understand.*
