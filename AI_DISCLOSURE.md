@@ -2,7 +2,7 @@
 
 **Course:** ITMSD1 – Introduction to Mobile Design and Tools  
 **Academic Year:** 1st Semester, 2026–2027  
-**Participating Class:** Section C  
+**Participating Class:** Section C
 
 ## 1. Project Information
 
@@ -27,6 +27,7 @@ The team used ChatGPT, OpenCode, and Kilo Code as development assistance tools w
 - Preparing and improving development instructions for the existing WattWise application.
 - Getting coding guidance and troubleshooting assistance for the Expo React Native project.
 - Reviewing application functionality and identifying possible improvements.
+- Preparing instructions for AI coding agents to implement requested features.
 
 **Prompt record:** Summary of development-related interactions. The exact original prompts and dates are not available in the collected conversation exports.
 
@@ -34,9 +35,8 @@ The team used ChatGPT, OpenCode, and Kilo Code as development assistance tools w
 
 **Purpose:** Implementing and improving WattWise application features using the existing Expo React Native project.
 
-**Development activities:**
+**1. Figma Design to Expo Application**
 
-**1. Figma Design to Expo Application**  
 **Date:** November 12, 2026
 
 **Prompt summary:** Asked OpenCode to implement the WattWise Figma design in the existing Expo application.
@@ -86,6 +86,11 @@ The team used ChatGPT, OpenCode, and Kilo Code as development assistance tools w
 **Date:** Not confirmed in the available export.
 
 **Prompt summary:** Requested improvements to make the bill calculation and bill history features functional in the WattWise Expo application.
+
+**Development activities:**
+- Improving electricity bill calculation functionality.
+- Working on bill history features.
+- Improving the presentation of electricity consumption and billing information.
 
 **Note:** The complete original prompt and implementation details were not available in the collected excerpt.
 
@@ -139,14 +144,12 @@ The team used ChatGPT, OpenCode, and Kilo Code as development assistance tools w
 
 ## 3. Weekly Development Timeline
 
-| Week | Date | Development activities |
+| Week | Date | Development Activities |
 |---|---|---|
-| Week 1 | October 16, 2026 | WattWise project development and planning. Specific AI prompts and tool usage have not yet been verified. |
-| Week 2 | November 11, 2026 | WattWise development activities. Specific AI prompts and tool usage have not yet been verified. |
-| Week 3 | November 12, 2026 | OpenCode assistance in implementing the WattWise Figma design into the Expo application. |
-| Week 4 | November 14–15, 2026 | WattWise feature improvements, chatbot conversation history, dashboard gradient button, and administrator authentication security improvements using the available AI development tools. |
-
-*Note: Activities without verified dates are not assigned to a specific week.*
+| Week 1 | October 16, 2026 | Initial WattWise project planning, feature discussions, and development preparation with AI assistance. The team discussed the project's objectives and planned application features. |
+| Week 2 | November 11, 2026 | Continued WattWise development, including application improvements, interface planning, and preparation for implementation using AI development assistance. |
+| Week 3 | November 12, 2026 | Used OpenCode to translate the approved WattWise Figma design into the existing Expo React Native application. Worked on application screens, navigation, components, and theme improvements. |
+| Week 4 | November 14–15, 2026 | Used AI development tools to improve chatbot conversation history, dashboard UI, and administrator authentication. Implemented conversation saving, reopening, renaming, and deletion, improved the Dashboard Calculate Bill button, and conducted security improvements. |
 
 ## 4. AI Usage and Human Responsibility
 
@@ -154,12 +157,15 @@ AI tools were used as development assistants. The team remained responsible for 
 
 AI-generated suggestions and code were not automatically considered correct. Testing and reviewing were necessary to identify errors and ensure that the existing WattWise application continued to work.
 
+The team also made decisions about which AI-generated suggestions to accept, modify, or reject based on the application's requirements.
+
 ## 5. Disclosure Notes
 
 - ChatGPT, OpenCode, and Kilo Code were used for WattWise-related development assistance.
 - Gemini API was used as the AI service integrated into the WattWise chatbot.
 - OpenCode and Kilo Code assisted with implementation and code improvements.
 - Some prompt descriptions in this document are summaries because the complete original conversation exports were not available.
+- Dates that could not be confirmed are not presented as exact dates in the individual AI tool records.
 - No unrelated conversations, AI-agent installation instructions, or connection troubleshooting activities are included.
 - Reported implementation and testing results are based on the available AI conversation records.
 
